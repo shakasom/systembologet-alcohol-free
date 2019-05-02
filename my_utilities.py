@@ -50,7 +50,7 @@ def calculate_alcoholfree_total(df, filtered):
     """calculate/sum number of products for each shop"""
     total = filtered.sum(axis=1)
     filtered.loc[:, 'total'] = total
-    filtered.is_copy = None
+    #filtered.is_copy = None
     return pd.concat([df['butik'], filtered['total']], axis=1)
 
 
